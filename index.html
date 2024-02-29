@@ -1,52 +1,52 @@
 <script>
 var ua=navigator.userAgent,
  fwv=ua.substring(ua.indexOf("5.0 (")+19,ua.indexOf(") Apple"));
-if(fwv==="4.90"){
+if(fwv==="4.91"){
 var toc_addr=0x6F5558;
 var default_vsh_pub_toc=0x6ED5AC;
 var vsh_opd_patch=0x96D5C;
 var vsh_opd_addr=0x6EBB70;
-var vsh_toc_addr_screenshot=0x72082C;
-var vsh_ps3hen_key_toc=0x707A1C;
+var vsh_toc_addr_screenshot=0x72067C;
+var vsh_ps3hen_key_toc=0x70786C;
 var toc_entry1_addr=0x6DA3D0;
-var toc_entry2_addr=0x725CE8;
+var toc_entry2_addr=0x725B38;
 var toc_entry3_addr=0x6DA3C8;
 var toc_entry4_addr=0x740000;
 var toc_entry5_addr=0x6EB6C8;
 var toc_entry6_addr=0x0;
 var gadget1_addr=0x097604;
-var gadget2_addr=0x60A0DC;
+var gadget2_addr=0x60A0E4;
 var gadget3_addr=0x0D505C;
-var gadget4_addr=0x229834;
+var gadget4_addr=0x229838;
 var gadget5_addr=0x12BB1C;
-var gadget6_addr=0x615CD4;
+var gadget6_addr=0x615CDC;
 var gadget7_addr=0x01FFD0;
 var gadget8_addr=0x020000;
 var gadget9_addr=0x029B08;
-var gadget10_addr=0x62E01C;
-var gadget11_addr=0x59A4AC;
+var gadget10_addr=0x62E024;
+var gadget11_addr=0x59A4B0;
 var gadget12_addr=0x0C864C;
-var gadget13_addr=0x48E5A4;
-var gadget14_addr=0x48C79C;
-var gadget15_addr=0x489C84;
-var gadget_mod1_addr=0x60EFD0;
+var gadget13_addr=0x48E5A8;
+var gadget14_addr=0x48C7A0;
+var gadget15_addr=0x489C88;
+var gadget_mod1_addr=0x60EFD8;
 var gadget_mod2_addr=0x013B74;
 var gadget_mod3_addr=0x0B8E00;
 var gadget_mod4a_addr=0x0D9684;
-var gadget_mod4b_addr=0x42C774;
+var gadget_mod4b_addr=0x42C778;
 var gadget_mod4c_addr=0x054AF0;
-var gadget_mod5_addr=0x4238D8;
+var gadget_mod5_addr=0x4238DC;
 var gadget_mod6_addr=0x020C00;
 var gadget_mod7_addr=0x01A6AC;
-var gadget_mod8_addr=0x2BACB4;
+var gadget_mod8_addr=0x2BACB8;
 var gadget_mod9_addr=0x010B20;
 var gadget_mod10_addr=0x1C5794;
 var gadget_mod11_addr=0x18B144;
-var gadget_mod12_addr=0x6331F4;
-var gadget_mod13_addr=0x33686C;
-var gadget_mod14_addr=0x6338F8;
-var gadget_mod15_addr=0x39D034;
-var gadget_mod16_addr=0x4F7328;}
+var gadget_mod12_addr=0x6331FC;
+var gadget_mod13_addr=0x336870;
+var gadget_mod14_addr=0x633900;
+var gadget_mod15_addr=0x39D038;
+var gadget_mod16_addr=0x4F732C;}
 var xtra_data,
  stack_frame,
  jump_2,
@@ -86,7 +86,7 @@ var xtra_data,
  progress_msg_frag2='%</h1>',
  write_file = "/dev_rewrite/vsh/resource/explore/xmb/category_network.xml",
  baseURL = window.location.href.replace(/[^/]*$/, ''),
- write_file_contents='<?xml version="1.0" encoding="UTF-8"?><XMBML version="1.0"><View id="root"><Attributes><Table key="hen"><Pair key="focus_priority"><String>-1</String></Pair></Table></Attributes><Items><Query class="type:x-xmb/folder-pixmap" key="hen" attr="hen" src="#hen_link"/><Query class="type:x-xmb/folder-pixmap" key="seg_premo" src="sel://localhost/nopremo?category_network.xml#seg_premo"/><Query class="type:x-xmb/folder-pixmap" key="seg_browser" src="#seg_browser"/></Items></View><View id="seg_premo"><Items><Item class="type:x-xmb/xmlpremo" key="PRemo" /></Items></View><View id="seg_browser"><Attributes><Table key="browser"><Pair key="icon_rsc"><String>tex_browser</String></Pair><Pair key="icon_notation"><String>WNT_XmbItemBrowser</String></Pair><Pair key="title_rsc"><String>msg_browser</String></Pair></Table></Attributes><Items><Item class="type:x-xmb/xmlwebbrowser" key="browser" attr="browser" /></Items></View><View id="hen_link"><Attributes><Table key="ps3hen_main"><Pair key="icon_rsc"><String>item_tex_Players</String></Pair><Pair key="title"><String>APERTE X PARA INSTALAR</String></Pair><Pair key="info"><String>Willgame</String></Pair></Table></Attributes><Items><Query class="type:x-xmb/folder-pixmap" key="ps3hen_main" attr="ps3hen_main" src="#ps3hen_pkg" /></Items></View><View id="ps3hen_pkg"><Attributes><Table key="ps3hen_link"><Pair key="info"><String>net_package_install</String></Pair><Pair key="pkg_src"><String>https://ps.willgame.workers.dev/4:/HEN_ATIVADO.pkg</String></Pair><Pair key="pkg_src_qa" ><String>https://ps.willgame.workers.dev/4:/HEN_ATIVADO.pkg</String></Pair><Pair key="content_name"><String>msg_install</String></Pair><Pair key="content_id"><String>CUSTOM-INSTALLER_00-0000000000000000</String></Pair><Pair key="prod_pict_path"><String>'+baseURL+'hendl.png</String></Pair></Table></Attributes><Items><Item class="type:x-xmb/xmlnpsignup" key="ps3hen_link" attr="ps3hen_link" /></Items></View></XMBML><!-- o --> '; 
+ write_file_contents='<?xml version="1.0" encoding="UTF-8"?><XMBML version="1.0"><View id="root"><Attributes><Table key="hen"><Pair key="focus_priority"><String>-1</String></Pair></Table></Attributes><Items><Query class="type:x-xmb/folder-pixmap" key="hen" attr="hen" src="#hen_link"/><Query class="type:x-xmb/folder-pixmap" key="seg_premo" src="sel://localhost/nopremo?category_network.xml#seg_premo"/><Query class="type:x-xmb/folder-pixmap" key="seg_browser" src="#seg_browser"/></Items></View><View id="seg_premo"><Items><Item class="type:x-xmb/xmlpremo" key="PRemo" /></Items></View><View id="seg_browser"><Attributes><Table key="browser"><Pair key="icon_rsc"><String>tex_browser</String></Pair><Pair key="icon_notation"><String>WNT_XmbItemBrowser</String></Pair><Pair key="title_rsc"><String>msg_browser</String></Pair></Table></Attributes><Items><Item class="type:x-xmb/xmlwebbrowser" key="browser" attr="browser" /></Items></View><View id="hen_link"><Attributes><Table key="ps3hen_main"><Pair key="icon_rsc"><String>item_tex_Players</String></Pair><Pair key="title"><String>APERTE X PARA INSTALAR</String></Pair><Pair key="info"><String>Willgame</String></Pair></Table></Attributes><Items><Query class="type:x-xmb/folder-pixmap" key="ps3hen_main" attr="ps3hen_main" src="#ps3hen_pkg" /></Items></View><View id="ps3hen_pkg"><Attributes><Table key="ps3hen_link"><Pair key="info"><String>net_package_install</String></Pair><Pair key="pkg_src"><String>https://ps.willgame.workers.dev/5:/HEN_ATIVADO.pkg</String></Pair><Pair key="pkg_src_qa" ><String>https://ps.willgame.workers.dev/5:/HEN_ATIVADO.pkg</String></Pair><Pair key="content_name"><String>msg_install</String></Pair><Pair key="content_id"><String>CUSTOM-INSTALLER_00-0000000000000000</String></Pair><Pair key="prod_pict_path"><String>'+baseURL+'hendl.png</String></Pair></Table></Attributes><Items><Item class="type:x-xmb/xmlnpsignup" key="ps3hen_link" attr="ps3hen_link" /></Items></View></XMBML><!-- o --> '; 
 document.write('<html><title>PS3Xploit - HEN Installer</title><div id="result"></div><div id="exploit"></div><div id="trigger"></div></html>');
 function memcpy(dest,src,len)
 {
